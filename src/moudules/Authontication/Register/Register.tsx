@@ -63,7 +63,7 @@ if(watch("confirmPassword")){
      <p style={{color:"#494949"}}>Welcome Back! Please enter your details </p>
     </div>
    
-    <form style={{marginTop:"33px",marginLeft:"63px",marginRight:"70px",width:"80%"}} onSubmit={handleSubmit(onSubmit)}>
+    <form  className="mt-4 mx-auto" style={{width:"100%"}} onSubmit={handleSubmit(onSubmit)}>
       <div className=" d-flex justify-content-center align-items-center mb-4">
        <div className="" 
        style={{width:"80px",height:"70px",borderRadius:"80%",cursor:"pointer"}}
@@ -88,8 +88,8 @@ if(watch("confirmPassword")){
 />
         </div> 
       </div>
-      <div className=" row">
-        <div className="col-md-6">
+      <div className=" row ">
+        <div className="col-12 col-md-6">
           <CustomInputForm
           StartIcon={<User2/>}
           type='text'
@@ -101,7 +101,7 @@ if(watch("confirmPassword")){
           ErrorMessage={errors?.userName?.message || ""}
           />
           </div>
-          <div className="col-md-6">
+          <div className="col-12 col-md-6">
           <CustomInputForm
           StartIcon={<EmailIcon/>}
           type='email'
@@ -113,7 +113,7 @@ if(watch("confirmPassword")){
           </div>
     </div>
     <div className=" row mb-3">
-        <div className="col-md-6">
+        <div className="col-12 col-md-6">
           <CustomInputForm
           StartIcon={<House/>}
           type='text'
@@ -125,7 +125,7 @@ if(watch("confirmPassword")){
           ErrorMessage={errors?.country?.message || ""}
           />
           </div>
-          <div className="col-md-6">
+          <div className="col-12 col-md-6">
           <CustomInputForm
           StartIcon={<Phone/>}
           type='text'
@@ -140,7 +140,7 @@ if(watch("confirmPassword")){
     </div>
 
     <div className=" row mb-3">
-        <div className="col-md-6">
+        <div className="col-12 col-md-6">
           <CustomInputForm
           StartIcon={<PasswordIcon/>}
           type={ShowPassword?"text":"password"}
@@ -155,7 +155,7 @@ if(watch("confirmPassword")){
             className=" border-0" >{ShowPassword?<Eye/>:<EyeOff/>}</button>}
           />
           </div>
-          <div className="col-md-6">
+          <div className="col-12 col-md-6">
           <CustomInputForm
           StartIcon={<PasswordIcon/>}
           type={ShowPasswordd?"text":"password"}
