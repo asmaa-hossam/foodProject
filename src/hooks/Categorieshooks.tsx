@@ -3,7 +3,10 @@ import { createCategory, deleteCategory, getAllCategory, updateCategory } from "
 import type { CategotyRes, CreateCategory } from "../interfaces";
 import { toast } from "react-toastify";
 
-export const useGetAllCategories = (pageSize:number,pageNumber:number,name:string) => {
+export const useGetAllCategories = (  pageSize: number = 6,
+  pageNumber: number = 1,
+  name: string = ""
+) => {
     return useQuery<CategotyRes>({
         queryKey: ["categories",pageSize,pageNumber,name],
         queryFn:()=> getAllCategory(pageSize,pageNumber,name),
